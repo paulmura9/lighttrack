@@ -1,0 +1,9 @@
+[submodule "solar-dashboard"]
+	path = solar-dashboard
+	url = https://github.com/paulmura9/solar-dashboard.git
+[submodule "solar-api"]
+	path = solar-api
+	url = https://github.com/paulmura9/solar-api.git
+[submodule "solar-pi"]
+	path = solar-pi
+	url = https://github.com/paulmura9/solar-pi.git
