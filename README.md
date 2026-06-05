@@ -4,8 +4,6 @@ LightTrack is a dual-axis solar tracking system with automated dirt detection, d
 
 The system orients a solar panel toward the sun on two axes (azimuth and elevation) to maximize energy capture, monitors panel and battery power in real time, and uses a camera with an on-device ML model to detect dirt accumulation on the panel surface.
 
-![LightTrack prototype](docs/images/prototype.jpg)
-
 ## Repository Structure
 
 This is a parent repository linking four submodules:
@@ -28,8 +26,6 @@ ESP32 (panel)  <-- MQTT -->  Raspberry Pi (gateway)  <-- WebSocket -->  Backend 
                                                                         Supabase
                                                                  (PostgreSQL + Storage + Auth)
 ```
-
-![Architecture diagram](docs/images/architecture.png)
 
 ### 1. ESP32 - Device Layer
 
@@ -74,8 +70,6 @@ A Next.js web application hosted on Vercel:
 - Remote control: manual servo positioning, tracking mode toggle, on-demand camera capture
 - Command history with live status (pending, sent, acknowledged)
 - Authentication via Supabase Auth; live updates pushed over WebSocket
-
-![Dashboard screenshot](docs/images/dashboard.png)
 
 ## Data Storage - Supabase
 
@@ -127,8 +121,6 @@ Images take a separate path from telemetry, because binary files do not belong o
 
 This keeps the WebSocket channel lightweight and lets Storage serve images efficiently to the browser.
 
-![Dirt detection result](docs/images/dirt_detection.png)
-
 ## Command Flow - controlling the panel from the website
 
 Example: the user moves the panel manually from the dashboard.
@@ -165,5 +157,3 @@ One exception: the image capture command is handled entirely on the Pi (it owns 
 - 2x INA219 current/voltage sensors (panel, battery)
 - SSD1306 OLED display
 - CN3791 MPPT charge controller, 2S Li-ion battery pack, LM2596 buck converter
-
-![Hardware assembly](docs/images/hardware.jpg)
