@@ -7,3 +7,6 @@
 [submodule "solar-pi"]
 	path = solar-pi
 	url = https://github.com/paulmura9/solar-pi.git
+[submodule "solar-firmware"]
+	path = solar-firmware
+	url = https://github.com/paulmura9/solar-firmware.git
